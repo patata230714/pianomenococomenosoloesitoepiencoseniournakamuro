@@ -1,0 +1,75 @@
+from time import sleep
+class boetz():
+
+    def __init__(self, name, health, armor, power, weapon):
+        self.name = name
+        self.health = health #number
+        self.armor = armor #string
+        self.power = power #number
+        self.weapon = weapon #string
+
+    def print_info(self):
+        print('Greet the hero ->', self.name)
+        print('Health level:', self.health)
+        print('Armor class:', self.armor)
+        print('Power of the strike:', self.power)
+        print('Weapon:', self.weapon,)
+
+    def strike(self, enemy):
+        print(self.name + "attacks " + enemy.name + " with power " + str(self.power)  + " using"  + self.weapon)
+        enemy.armor -= self.power
+        if enemy.armor < 0:
+            enemy.health += enemy.armor
+            enemy.armor = 0
+            print(enemy.name + " armor dropped down to " + str(enemy.armor) + " and the health dropped down to " + str(enemy.health)) 
+    def draka(self,enemy):
+        while self.health and enemy.health >0:
+            self.strike(enemy)
+            if enemy.health <= 0:
+                print(enemy.name + ",hehe boi inimy is ded like ded ")
+                break
+            sleep(0.1)
+            enemy.strike(self)
+            if self.health <= 0:
+                print(self.name + "ur lox cuz ur ded lol")
+                break
+            sleep(0.0000000001)
+        
+
+print("Petre saw helicopter but it flew away and nearly became ded.(btw helicopter is a ohio ded ancient creature so he can be ded). Petre need to find a sr-71 blackbird to rescue helicopter ")
+print("    ")
+knight = boetz('Petre ', 50, 45, 67903240786507892640783078924708394780470368208946230789643079099876420789342875608780792568753879879807562038786459080948672509785649785674829079864578965429070978654078954687098470952608972789670980945609758467856407899875468794568796452778245078264507896045789407896578526807945607892076807847845, ' pult at yaderki. ')
+knight.print_info()
+
+sleep(1)
+
+print(knight.name + "is going in ohio suddenly a nuclear airstrike robbbbbbbbber appears")
+
+sleep(1)
+mincerafter = boetz("Patre", 50,45,0.000000000000000000001, "palka")
+mincerafter.print_info
+print(mincerafter.name+ "said - YOU STOLE MY NAME!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+sleep(2)
+
+if input(" yes or notankalapakaumaymamudashikaka") == "yes":
+    print("LÈT THÈ FIGHT BÈGIN!!!!!!!!")
+    sleep(2)
+    knight.draka(mincerafter)
+
+    if knight.health >= 1:
+        knight.health = 100
+        knight.armor *= 6 
+        print("                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     " + mincerafter.name + "BECAME DED LIKE A DOG MUHAHAHAHAHA! and got a level up with " + str(knight.health) + " pelemen and UpGrAdEd" + str(knight.armor))
+
+
+
+#knight = boetz('Petre ', 50, 45, 30, ' pult at yaderki. ')
+#knight.print_info()
+##print("       ")
+#minecrafter = boetz('Patre', 50, 25, 20, ' palka.')
+#minecrafter.print_info()
+#print("       ")
+
+#knight.strike(minecrafter)
+#minecrafter.strike(knight)

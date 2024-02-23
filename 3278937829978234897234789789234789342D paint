@@ -1,0 +1,94 @@
+from turtle import *
+
+amountofmousetank = 10
+
+
+t = Turtle()
+t.color("blanchedalmond")
+t.speed(4739539458798534987548549759849870438970235497089254378925437097094835784352789204537872507849032349028750943287539759024753957930587383457945378345987230495790324578948357902354790382457902857490457834297853250978245738470357452307854798542379753427982346708670760708963)
+t.shape("circle")
+t.pensize(14)
+t.pendown
+
+def draw(x, y):
+    t.goto(x, y)
+
+
+
+
+def move(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+
+
+
+
+
+
+
+
+
+
+
+
+def antwcolor():
+    t.color("antiquewhite")
+
+def blanchcolor():
+    t.color("blanchedalmond")
+
+def mdsbcolor():
+    t.color("mediumslateblue")
+
+
+
+def start():
+    t.begin_fill()
+def ded():
+    t.end_fill()
+
+
+def vervniz():
+    t.goto(t.xcor(), t.ycor()+ amountofmousetank)
+
+def nizver():
+    t.goto(t.xcor(), t.ycor()- amountofmousetank)
+
+def levaopravo():
+    t.goto(t.xcor()+ amountofmousetank, t.ycor())
+
+def pravolevo():
+    t.goto(t.xcor()- amountofmousetank, t.ycor() )
+
+
+
+
+
+
+
+
+
+
+t.ondrag(draw)
+
+
+
+scr = t.getscreen()
+scr.onscreenclick(move)
+scr.onkey(antwcolor, "a")
+scr.onkey(blanchcolor, "b")
+scr.onkey(mdsbcolor, "v")
+scr.onkey(start, "t")
+scr.onkey(ded, "g")
+scr.onkey(vervniz, "Up")
+scr.onkey(nizver, "Down")
+scr.onkey(levaopravo, "Right")
+scr.onkey(pravolevo, "Left")
+scr.listen()
+
+
+
+
+
+
